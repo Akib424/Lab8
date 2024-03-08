@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 //import org.junit.Before;
+import androidx.collection.ArraySet;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,6 +19,11 @@ public class CustomListTest {
 
     private CustomList cityList;
     private City city;
+
+
+
+
+
 
 
     /**
@@ -41,6 +48,30 @@ public class CustomListTest {
         int listSize = list.getCount();
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @BeforeEach
+    void setUp() {
+        cityList = MockCityList();
+        city = new City("New York", "USA");
+        cityList.addCity(city);
     }
 
 
