@@ -23,6 +23,7 @@ public class CustomList extends ArrayAdapter<City> {
         this.context = context;
     }
 
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -64,7 +65,7 @@ public class CustomList extends ArrayAdapter<City> {
      * @return true if the city is in the list, false otherwise
      */
     public boolean hasCity(City city) {
-        //return cities.contains(city);
+        return cities.contains(city);
     }
 
     /**
@@ -74,9 +75,9 @@ public class CustomList extends ArrayAdapter<City> {
      * @throws IllegalArgumentException if the city is not in the list
      */
     public void delete(City city) {
-//        if (!cities.remove(city)) {
-//            throw new IllegalArgumentException("City not found in the list");
-//        }
+        if (!cities.remove(city)) {
+            throw new IllegalArgumentException("City not found in the list");
+        }
     }
 
     /**
@@ -85,7 +86,7 @@ public class CustomList extends ArrayAdapter<City> {
      * @return the number of cities
      */
     public int countCities() {
-        //return cities.size();
+        return cities.size();
     }
 
 

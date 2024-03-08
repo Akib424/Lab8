@@ -28,12 +28,6 @@ public class CustomListTest {
     }
 
 
-    @BeforeEach
-    void setUp() {
-        cityList = new CustomList();
-        city = new City("New York", "USA");
-        cityList.add(city);
-    }
 
     /**
      * get the size of the list
